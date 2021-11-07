@@ -53,7 +53,7 @@ function Post({ id, username, creatorId, userImg, img, caption }) {
                 {(creatorId === session?.user?.uid) ? <TrashIcon onClick={deletePost} className="h-6 text-red-500 cursor-pointer" /> : <DotsVerticalIcon className="h-6 cursor-pointer" />}
             </div>
 
-            <img src={img} className="w-full h-full object-cover" alt="" />
+            <img src={img} className="w-full h-full object-cover max-h-[450px] sm:max-h-[500px] md:max-h-[600px] lg:max-h-[700px]" alt="" />
 
             <div className="flex justify-between items-center px-4 pt-4">
                 <div className="flex space-x-4 items-center">
@@ -68,14 +68,14 @@ function Post({ id, username, creatorId, userImg, img, caption }) {
                 <BookmarkIcon className="btn" />
             </div>
 
-            <div className={`p-5 pt-3 text-sm flex items-end`}>
+           {caption?.length > 0 && <div className={`p-5 pt-3 text-sm flex items-end`}>
                 <p className={` ${!more && 'truncate'}`}>
                     {likes?.length > 0 && <p className="font-semibold mb-1 text-sm">{likes.length} likes</p>}
                     <span className="font-semibold mr-1">{username} </span>
                     {caption}
                 </p>
                 {caption?.length > 90 && <a className="text-gray-500 cursor-pointer ml-1" onClick={() => setMore(!more)}>{more ? 'less' : 'more'}</a>}
-            </div>
+            </div>}
 
             {comments &&
                 <div className="ml-10 max-h-40 overflow-y-scroll">
