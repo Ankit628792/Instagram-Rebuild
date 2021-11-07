@@ -7,7 +7,7 @@ import Router from 'next/router'
 import ProgressBar from '@badrap/bar-of-progress'
 
 const progress = new ProgressBar({
-  size: 3,
+  size: 5,
   className: "z-50 insta-gradient",
   delay: 100
 })
