@@ -68,14 +68,14 @@ function Post({ id, username, creatorId, userImg, img, caption }) {
                 <BookmarkIcon className="btn" />
             </div>
 
-           {caption?.length > 0 && <div className={`p-5 pt-3 text-sm flex items-end`}>
+             <div className={`p-5 pt-3 text-sm flex items-end`}>
                 <p className={` ${!more && 'truncate'}`}>
                     {likes?.length > 0 && <p className="font-semibold mb-1 text-sm">{likes.length} likes</p>}
                     <span className="font-semibold mr-1">{username} </span>
                     {caption}
                 </p>
                 {caption?.length > 90 && <a className="text-gray-500 cursor-pointer ml-1" onClick={() => setMore(!more)}>{more ? 'less' : 'more'}</a>}
-            </div>}
+            </div>
 
             {comments &&
                 <div className="ml-10 max-h-40 overflow-y-scroll">
