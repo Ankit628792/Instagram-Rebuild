@@ -2,7 +2,7 @@ import { getProviders, signIn } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import Header from '../../components/Header'
 
-function signin({providers}) {
+function SignIn({providers}) {
     const router = useRouter()
     // Capture and Share the world's moments!
     return (
@@ -25,7 +25,7 @@ function signin({providers}) {
     )
 }
 
-export default signin
+export default SignIn
 
 export async function getServerSideProps(context) {
     const providers = await getProviders()
