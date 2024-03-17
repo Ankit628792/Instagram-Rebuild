@@ -1,4 +1,10 @@
+## Instagram Feed
+- google authentication
+- manage your posts
+- like and comment on other user's post
+
 ### Preview : https://instagram-rebuild.vercel.app/
+
 <img src="/ss.png" />
 
 <br />
