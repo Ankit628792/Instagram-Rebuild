@@ -1,7 +1,8 @@
 ## Instagram Feed
-- google authentication
 - manage your posts
 - like and comment on other user's post
+- google authentication
+- responsive UI
 
 ### Preview : https://instagram-rebuild.vercel.app/
 
